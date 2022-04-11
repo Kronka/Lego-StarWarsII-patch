@@ -6,4 +6,7 @@ This repository is aimed at Lego Star Wars II. But I'm sure the rest of the Lego
 I would like to try to fix it, but I need the help of society. So far we have a small debug that records the crash address.  
 Researches:  
 - My friend had a game crash on the first mission in the cutscene. There is a problem in the amd driver in the file nvd3dum.dll , at 0x5E0A61BC (EXCEPTION_ACCESS_VIOLATION)  
-- I caught a game crash once at 0x5481CA (qmemcpy, 0x0 nullptr)
+- I caught a game crash once at 0x5481CA (qmemcpy, 0x0 nullptr)  
+  
+## How to install its small debugger? ##
+d3d9.dll put it in the folder with the game (where LegoStarWarsII.exe )
