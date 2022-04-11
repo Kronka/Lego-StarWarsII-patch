@@ -9,4 +9,7 @@ Researches:
 - I caught a game crash once at 0x5481CA (qmemcpy, 0x0 nullptr)  
   
 ## How to install its small debugger? ##
-d3d9.dll put it in the folder with the game (where LegoStarWarsII.exe )
+d3d9.dll put it in the folder with the game (where LegoStarWarsII.exe )  
+  
+## Does this patch fix bugs? ##
+At the moment, we need to collect all the existing errors. So far, this patch does nothing but collect error data.
