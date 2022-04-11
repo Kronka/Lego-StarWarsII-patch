@@ -262,11 +262,12 @@ IDirect3D9* WINAPI sys_Direct3DCreate9(UINT SDKVersion)
 	Log("binkw32 = 0x%X", GetModuleHandleA("binkw32"));
 	Log("d3dx9_30 = 0x%X", GetModuleHandleA("d3dx9_30"));
 	//Log("nvd3dum = 0x%X", GetModuleHandleA("nvd3dum"));
-	uint32_t test = (uint32_t)LoadLibrary("C:\\Windows\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_c0e159863e7afdde\\nvd3dum.dll");
-	Log("nvd3dum = 0x%X",test);
-
-	MH_CreateHook((void*)(test + 0x986150), &hk_sub_10986150, (void**)(&o_sub_10986150));
-	MH_EnableHook((void*)(test + 0x986150));
+	// try find nvd3dum
+	//uint32_t test = (uint32_t)LoadLibrary("C:\\Windows\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_c0e159863e7afdde\\nvd3dum.dll");
+	//Log("nvd3dum = 0x%X",test);
+	// try fix this problem
+	//MH_CreateHook((void*)(test + 0x986150), &hk_sub_10986150, (void**)(&o_sub_10986150));
+	//MH_EnableHook((void*)(test + 0x986150));
 
 	return orig_Direct3DCreate9(SDKVersion);
 }
