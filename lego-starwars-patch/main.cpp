@@ -278,6 +278,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 	{
 	case DLL_PROCESS_ATTACH:
 		DisableThreadLibraryCalls(hModule);
+		MH_Initialize(); //for init hook system
 		g_hDllModule = hModule;
 		OrigExceptionFilter = SetUnhandledExceptionFilter(unhandledExceptionFilter);
 		break;
